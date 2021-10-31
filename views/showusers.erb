@@ -1,14 +1,26 @@
 <%= @results %>
 
-<table class="table table-striped">
-	
-	<% @results.each do |row| %>
+<table class="table table-striped"> <!-- table-striped-выделение строк полоской, через одну -->
+	<thead>
 		<tr>
-			<td><%= row['username']%></td>
-			<td><%= row['phone']%></td>
-			<td><%= row['datestamp']%></td>
-			<td><%= row['barber']%></td>
-			<td><%= row['color']%></td>
+			<th>Имя</th>
+			<th>Телефон</th>
+			<th>Дата записи</th>
+			<th>Парикмахер</th>
+			<th>Цвет</th>
 		</tr>
-	<% end %>
+	</thead>
+
+	<body>
+		<% @results.each do |row| %>
+			<tr>
+				<td><%= row['username']%></td>
+				<td><%= row['phone']%></td>
+				<td><%= row['datestamp']%></td>
+				<td><%= row['barber']%></td>
+				<td><%= row['color']%></td>
+			</tr>
+		<% end %>
+	</body>	
+	
 </table>
