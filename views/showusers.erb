@@ -1,4 +1,4 @@
-<%= @results %>
+
 
 <table class="table table-striped"> <!-- table-striped-выделение строк полоской, через одну -->
 	<thead>
@@ -18,7 +18,7 @@
 				<td><%= row['phone']%></td>
 				<td><%= row['datestamp']%></td>
 				<td><%= row['barber']%></td>
-				<td><%= row['color']%></td>
+				<td style ="background-color: <%= row['color']%>"><%= row['color']%></td>
 			</tr>
 		<% end %>
 	</tbody>	
